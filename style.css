@@ -1,0 +1,200 @@
+/* Import Poppins Light font & Font Awesome Icons */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+/* General button styles */
+.clickable-area {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300; /* Poppins Light */
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 41%; /* Equal width */
+    height: 3%;
+    border-radius: 5px; /* Less rounded corners */
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Facebook button removed */
+
+#TickTok {
+    background: linear-gradient(to right, #40BFC1, #38D9B7);
+}
+
+#Instagram {
+    background: linear-gradient(to right, #FF715B, #E63A8A);
+}
+
+#website {
+    background: linear-gradient(to right, #F09A9A, #A48BF2);
+}
+
+/* New Follow Button Styles */
+#follow {
+    top: 17%;
+    left: 50%;
+    width: 31%;
+    height: 3%;
+    background-color: #4D90CD; /* Solid blue color for follow theme */
+}
+
+/* New Instagram Area Styles */
+#instagram {
+    top: 1%;
+    left: 33%;
+    width: 34%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent !important;
+}
+
+#instagram span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    background-image: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease-in-out;
+    text-transform: lowercase;
+}
+
+#instagram::after {
+    content: "\f16d"; /* Instagram icon */
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    position: absolute;
+    opacity: 0;
+    color: Black;
+    font-size: 28px;
+    transition: all 0.3s ease-in-out;
+}
+
+#instagram:hover span {
+    opacity: 0;
+}
+
+#instagram:hover::after {
+    opacity: 1;
+}
+
+/* Hover Effects */
+.clickable-area:hover {
+    filter: brightness(0.9);
+    transform: scale(1.03);
+}
+
+/* QR Code Specific Styles */
+#qr-code {
+    background: transparent;
+    overflow: visible;
+}
+
+#qr-code img {
+    border-radius: 10px;
+}
+
+#qr-code:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Common styles for both text and icon */
+.clickable-area::before,
+.clickable-area::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, font-family 0.3s ease-in-out;
+}
+
+/* Adding Text inside the Buttons */
+/* Facebook button removed */
+
+#TickTok::before {
+    content: "TickTok";
+}
+
+#Instagram::before {
+    content: "Instagram";
+}
+
+#website::before {
+    content: "Website";
+}
+
+/* Initial text for the Follow button */
+#follow::before {
+    content: "Follow";
+}
+
+/* Initially hide the icons */
+#TickTok::after,
+#Instagram::after,
+#website::after,
+#follow::after {
+    opacity: 0;
+}
+
+/* Change text to icons on hover */
+/* Facebook button removed */
+
+#TickTok:hover::before {
+    opacity: 0;
+}
+
+#TickTok:hover::after {
+    content: "\f097";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    opacity: 1;
+}
+
+#Instagram:hover::before {
+    opacity: 0;
+}
+
+#Instagram:hover::after {
+    content: "\f16d";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 900;
+    opacity: 1;
+}
+
+#website:hover::before {
+    opacity: 0;
+}
+
+#website:hover::after {
+    content: "\f0ac";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    opacity: 1;
+}
+
+/* Follow button icon on hover */
+#follow:hover::before {
+    opacity: 0;
+}
+
+#follow:hover::after {
+    content: "\f234";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    opacity: 1;
+}

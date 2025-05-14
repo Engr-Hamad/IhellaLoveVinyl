@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IHellaLoveVinyl</title>
+    <style>
+        /* General Styles */
+        body {
+            text-align: center;
+            background: linear-gradient(to bottom, #ee8056, #8058a0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: black;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .paint-emoji {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card Container */
+        .card-container {
+            position: relative;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 577px;
+            margin: 10px;
+        }
+
+        .card {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Clickable Areas */
+        .clickable-area {
+            position: absolute;
+            background: rgba(255, 255, 255, 0);
+            cursor: pointer;
+        }
+
+        /* Clickable areas for the front card */
+        #instagram { top: 1%; left: 30%; width: 40%; height: 6%; }
+        #TickTok { top: 33.5%; left: 4%; width: 41%; height: 3%; }
+        #Instagram { top: 37.5%; left: 4%; width: 41%; height: 3%; }
+        #website { top: 41.5%; left: 4%; width: 41%; height: 3%; }
+        #follow { top: 17%; left: 50%; width: 31%; height: 3%; }
+
+        /* Clickable QR code on the back card */
+        #qr-code { 
+            top: 47.5%; 
+            left: 28.4%; 
+            width: 43%; 
+            height: 22%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #qr-code img {
+            width: 110%;
+            height: 110%;
+            object-fit: contain;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Wrapper for Cards */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+            .card-container {
+                width: 90%;
+            }
+            .wrapper {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.2rem;
+            }
+            .card-container {
+                width: 100%;
+            }
+            .wrapper {
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tim W Ramos  <span class="paint-emoji">🎶🪩🕺🏾✈️🎧📸🇲🇽✨🙏🏾</span></h2>
+
+    <div class="wrapper">
+        <div class="card-container">
+            <img src="business-card-front.jpg" alt="Front of Business Card" class="card">
+            <a id="instagram" class="clickable-area" href="https://www.instagram.com/ihellalovevinyl/" target="_blank">
+                <span>paintedbymorg</span>
+            </a>
+            <!-- Facebook button removed -->
+            <a id="TickTok" class="clickable-area" href="https://www.tiktok.com/@ihellalovevinyl"></a>
+            <a id="Instagram" class="clickable-area" href="https://www.instagram.com/ihellalovevinyl" target="_blank"></a>
+            <a id="website" class="clickable-area" href="https://linktr.ee/iHellaLoveVinyl" target="_blank"></a>
+            <a id="follow" class="clickable-area" href="https://www.instagram.com/ihellalovevinyl" target="_blank"></a>
+        </div>
+
+        <div class="card-container">
+            <img src="business-card-back.jpg" alt="Back of Business Card" class="card">
+            <a id="qr-code" class="clickable-area" href="https://www.instagram.com/ihellalovevinyl" target="_blank">
+                <img src="qr-code.png" alt="QR Code">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div>© 2025 IHellaLoveVinyl. All rights reserved.</div>
+        <div>Designed by <a href="https://www.fiverr.com/s/42R24rx" target="_blank">Hammad @ Gorilla Designs</a></div>
+    </footer>
+
+</body>
+</html>
